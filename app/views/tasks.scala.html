@@ -1,0 +1,8 @@
+@(listName: String, tasks: List[wunderapp.Task])
+@main(s"List $listName") {
+    <ul>
+        @for(task <- tasks) {
+            <li>@if(task.starred){★}@task.title</li>
+        }
+    </ul>
+}

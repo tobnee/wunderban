@@ -1,0 +1,25 @@
+@(name: String, todos: List[wunderapp.Task], inProgress: List[wunderapp.Task])
+
+@taskView(tasks: List[wunderapp.Task]) = {
+  @for(todo <- tasks) {
+   <figure id="@todo.id" class="task" draggable="true">
+    <a class="cardTitle">@todo.title</a>
+   </figure>
+  }
+}
+
+@main(s"Wunderban for list $name") {
+    <main id="board">
+        <section class="status" id="todo">
+            <h2 class="title">To Do</h2>
+            @taskView(todos)
+        </section>
+        <section class="status" id="inprogress">
+            <h2 class="title">In Progress</h2>
+            @taskView(inProgress)
+        </section>
+        <section class="status" id="done">
+            <h2 class="title">Done</h2>
+        </section>
+    </main>
+}

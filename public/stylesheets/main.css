@@ -1,0 +1,55 @@
+a:visited, a:hover, a:link  {
+    color: #F9DF8D;
+}
+
+body
+{
+    color:#F9DF8D;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #796E24;
+}
+#board
+{
+    display: flex;
+    flex-direction: row;
+    min-height:100px;
+}
+.title
+{
+    background-color: #EE9C21;
+    text-align:center;
+    color:#F9DF8D;
+    padding: 2px 0px;
+}
+
+#todo, #inprogress, #done
+{
+    background-color: #F9DF8D;
+   /* position:absolute;*/
+    width: 300px;
+    min-height:150px;
+    border: 2px solid #A34E24;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex: 1;
+}
+
+*[draggable=true]
+{
+    color: #A34E24;
+    float:left;
+    min-width: 50px;
+    min-height: 50px;
+    border: 2px solid #FF9800;
+    margin: 10px;
+    font-weight:bold;
+    min-height:60px;
+    background-size:1px 8px;
+    background-repeat:repeat;
+}
+.cardTitle
+{
+    background-color: #F9DF8D;
+    border:2px solid #FF9800;
+}

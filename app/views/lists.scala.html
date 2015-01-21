@@ -1,0 +1,8 @@
+@(lists: List[wunderapp.ListInfo])
+@main("List Overview") {
+    <ul>
+        @for(list <- lists) {
+            <li><a href="@routes.Application.board(list.id)">@list.title</a></li>
+        }
+    </ul>
+}

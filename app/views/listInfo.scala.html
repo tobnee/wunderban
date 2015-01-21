@@ -1,0 +1,9 @@
+@(lists: Seq[wunderban.ListInfo])
+
+@main("Wunderban Lists") {
+    <ul>
+    @for(list <- lists) {
+        <li><a href="@routes.Application.tasks(list.id)">@list.title</a></li>
+    }
+    </ul>
+}
